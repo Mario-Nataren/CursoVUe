@@ -14,9 +14,9 @@ export default new Vuex.Store({
       state.frutas[index].cantidad ++
     },
     reset(state){
-      state.frutas[0].cantidad = 0,
-      state.frutas[1].cantidad = 0,
-      state.frutas[2].cantidad = 0
+      state.frutas.forEach(elemento => {
+        elemento.cantidad = 0
+      })
     }
   },
   actions: {

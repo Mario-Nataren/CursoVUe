@@ -6,8 +6,8 @@
                 {{item.nombre}}
                 <span class="badge badge-primary badge-pill">{{item.cantidad}}</span>
             </li>
-            <button class="alert alert-primary" @click="reset">Reset</button>
         </ul>
+            <button class="btn btn-danger btn-block" @click="reset">Reset</button>
     </div>
 </template>
 <script>
@@ -20,8 +20,7 @@ export default {
 
     },
     methods:{
-        ...mapMutations (['aumentar']),
-        ...mapMutations (['reset'])
+        ...mapMutations (['aumentar','reset']),
     }
 }
 </script>
