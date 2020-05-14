@@ -10,6 +10,14 @@ export default new Vuex.Store({
     {nombre:'Platano', cantidad:0}]
   },
   mutations: {
+    aumentar(state, index){
+      state.frutas[index].cantidad ++
+    },
+    reset(state){
+      state.frutas[0].cantidad = 0,
+      state.frutas[1].cantidad = 0,
+      state.frutas[2].cantidad = 0
+    }
   },
   actions: {
   },
